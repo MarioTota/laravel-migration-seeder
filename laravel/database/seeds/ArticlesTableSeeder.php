@@ -13,14 +13,14 @@ class ArticlesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i=0; $i < 5; $i++) { 
+        for ($i=0; $i < 20; $i++) { 
             $data = $faker->datetime();
 
             $newArticle = New Article();
             $newArticle->title = $faker->sentence($nbWords = 3, $variableNbWords = true);
             $newArticle->subtitle = $faker->sentence($nbWords = 6, $variableNbWords = true);
-            $newArticle->author = $faker->word;
-            $newArticle->text = $faker->paragraph($nbSentences = 3, $variableNbSentences = true);
+            $newArticle->author = $faker->name();
+            $newArticle->text = $faker->text(10000);
             $newArticle->publication_date = $faker->date($format = 'Y-m-d', $max = 'now');
             $newArticle->created_at = $data;
             $newArticle->updated_at = $data;

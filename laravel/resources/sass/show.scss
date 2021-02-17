@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #2A2E36;
+    color: #C9C4CA;
+}
+.container {
+    width: 80%;
+    padding-top: 50px;
+    margin: auto;
+    & h1 {
+        font-size: 60px;
+    }
+    & .author_pub {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        & div:first-child {
+            font-size: 13px;
+        }
+    }
+    & h2 {
+        margin-bottom: 30px;
+    }
+}
